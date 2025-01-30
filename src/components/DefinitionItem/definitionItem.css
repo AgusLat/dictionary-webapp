@@ -22,6 +22,7 @@
 
 .definitionItem__body {
     list-style-type: square;
+    padding-inline-start: 1rem;
 
 }
 
