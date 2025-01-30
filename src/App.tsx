@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./app.css";
 import { Definition } from "./components/Definition/Definition";
 import { Header } from "./components/Header/Header";
@@ -7,7 +8,15 @@ import { useThemeContext } from "./context/themeContext";
 import { Layout } from "./layout/Layout";
 
 export const App = () => {
-  const { isChecked } = useThemeContext();
+  const { isChecked, setIsChecked } = useThemeContext();
+
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "dark") {
+      setIsChecked(true);
+    } else {
+      setIsChecked(false);
+    }
+  }, []);
 
   return (
     <div className={isChecked ? "app --darkTheme" : "app"}>

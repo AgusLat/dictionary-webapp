@@ -9,7 +9,14 @@ export const Header = () => {
 
   const handleThemeChange = () => {
     //CHANGE THEME CONTEXT
-    setIsChecked(!isChecked);
+    if (!localStorage.getItem("theme")) {
+      console.log("paso a dark");
+      localStorage.setItem("theme", "dark");
+    }
+    setIsChecked((prevState) => {
+      localStorage.setItem("theme", !prevState ? "dark" : "light");
+      return !prevState;
+    });
   };
 
   return (
