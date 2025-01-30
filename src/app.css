@@ -1,13 +1,27 @@
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #f0f0f0;
+    color: #2a2929;
+    font-size: 16px;
+    scrollbar-gutter: auto;
+}
+
+.--darkTheme {
+    background-color: rgb(33, 44, 53);
+    color: #f6f6f6;
 }
 
 #root {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -15,17 +29,7 @@ body {
 .app {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    width: 70%;
-    max-width: 1080px;
-
-    height: 100vh;
-}
-
-
-@media (prefers-color-scheme: dark) {
-    .header {
-        background-color: darkblue;
-        color: azure;
-    }
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }

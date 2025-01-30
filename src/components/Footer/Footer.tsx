@@ -1,3 +1,9 @@
+import "./footer.css";
+
 export const Footer = () => {
-  return <div>Terminos legales y copyright</div>;
+  const year = new Date().getFullYear();
+
+  return (
+    <div className="footer">&copy; {year} pxweb - All rights reserved</div>
+  );
 };

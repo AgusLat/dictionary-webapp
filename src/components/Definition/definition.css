@@ -1,0 +1,48 @@
+.definition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 380px;
+    padding: 2rem 0.5rem;
+}
+
+.definition__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.definition__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.definition__title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.definition__title span {
+    font-size: 1.5rem;
+    color: #8152e6;
+}
+
+
+.definition__audio svg {
+    display: flex;
+    color: #a989ee;
+    cursor: pointer;
+    font-size: 6rem;
+    transition: filter 0.3s;
+}
+
+.definition__audio svg:hover {
+    filter: drop-shadow(0px 0px 1px rgba(232, 180, 251, 0.98));
+}

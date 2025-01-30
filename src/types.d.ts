@@ -3,14 +3,14 @@ export type ErrorType = string | null;
 
 // API JSON Response type
 // Tipo para los objetos dentro de "phonetics"
-type Phonetic = {
+export type Phonetic = {
   text: string;
   audio: string;
   sourceUrl?: string; // Opcional
 };
 
 // Tipo para los objetos dentro de "definitions"
-type Definition = {
+export type Definition = {
   definition: string;
   example?: string; // Opcional
   synonyms: string[];
@@ -18,7 +18,7 @@ type Definition = {
 };
 
 // Tipo para los objetos dentro de "meanings"
-type Meaning = {
+export type Meaning = {
   partOfSpeech: string;
   definitions: Definition[];
   synonyms: string[];
@@ -26,7 +26,7 @@ type Meaning = {
 };
 
 // Tipo para el objeto "license"
-type License = {
+export type License = {
   name: string;
   url: string;
 };
